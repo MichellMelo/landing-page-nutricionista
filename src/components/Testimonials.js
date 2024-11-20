@@ -1,14 +1,20 @@
+import styles from './Testimonials.module.css';
+
 export default function Testimonials() {
     return (
-        <section id="testimonials" className="py-12 vh-100">
-            <h2 className="display-4 text-center font-bold" style={{ color: 'var(--color-green-dark)', margin: '2rem 0', paddingTop: '7rem' }}>O que dizem nossos pacientes</h2>
-            <div className="">
+        <section id="testimonials" className="py-5">
+            <h2
+                className={`${styles.title} animate__animated animate__zoomIn display-4 text-center fw-bold`}
+            >
+                O que dizem nossos pacientes
+            </h2>
+            <div>
                 {/* Adicione depoimentos reais aqui */}
-                <blockquote className="d-flex justify-content-center" style={{
-                    margin: '5rem 15rem', textAlign: 'center'
-                }}>
-                    A Dra. Natielle mudou minha vida! Agora me sinto muito mais saudável. A consulta nutricional comecou a ser uma parte importante de minha vida e estou muito grata por ter encontrado a Dra.. Obrigada, Natielle!
-                </blockquote>
+                <ul className={styles.slide}>
+                    <li className={styles.list}>
+                        A Dra. Natielle mudou minha vida! Agora me sinto muito mais saudável. A consulta nutricional comecou a ser uma parte importante de minha vida e estou muito grata por ter encontrado a Dra.  Obrigada, Natielle!
+                    </li>
+                </ul>
                 {/* Outro depoimento */}
             </div>
         </section >

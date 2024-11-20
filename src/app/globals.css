@@ -41,17 +41,3 @@ h5,
 h6 {
   font-family: "NT Fabulous", serif;
 }
-
-.button {
-  background-color: var(--color-green-dark); /* Cor verde escura da paleta */
-  color: var(--color-white); /* Texto branco */
-  padding: 10px 20px;
-  border-radius: 1rem;
-  border: none;
-  font-family: "Poppins", sans-serif; /* Fonte Poppins */
-  cursor: pointer;
-}
-
-.button:hover {
-  background-color: var(--color-beige); /* Muda para bege claro no hover */
-}

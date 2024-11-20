@@ -1,0 +1,31 @@
+.contactTitle {
+  color: var(--color-green-dark);
+  text-align: center;
+  animation-duration: 2s;
+  margin-top: 5rem;
+}
+
+.form {
+  font-family: "Poppins", sans-serif;
+  width: 60%;
+  background-color: #ededed;
+  border-radius: 0.8rem;
+  padding: 2rem 3rem;
+  margin: 0 auto;
+}
+
+.button {
+  margin-top: 2rem;
+  background-color: var(--color-green-dark); /* Cor verde escura da paleta */
+  color: var(--color-white); /* Texto branco */
+  padding: 0.8rem;
+  width: 100%;
+  border-radius: 1rem;
+  border: none;
+  font-family: "Poppins", sans-serif; /* Fonte Poppins */
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-beige); /* Muda para bege claro no hover */
+}
