@@ -1,0 +1,18 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Altura total da viewport */
+  background-color: var(--background-color, #fff); /* Cor de fundo opcional */
+  background-image: url("/images/hero.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.heroTitle {
+  color: var(--color-green-dark);
+  margin-bottom: 9rem;
+  text-align: center;
+  animation-duration: 2s;
+}

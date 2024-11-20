@@ -1,42 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@400;700&display=swap");
+
+@font-face {
+  font-family: "NT Fabulous";
+  src: url("/fonts/NTFabulous-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Hatolie";
+  src: url("/fonts/Hatolie-Regular.ttf") format("truetype");
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --color-white: #ffffff;
+  --color-beige: #d9c6c0;
+  --color-green-dark: #61776b;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-white);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
+p,
 a {
-  color: inherit;
-  text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+h1,
+h2,
+h3 {
+  font-family: "Cinzel", serif;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "NT Fabulous", serif;
+}
+
+.button {
+  background-color: var(--color-green-dark); /* Cor verde escura da paleta */
+  color: var(--color-white); /* Texto branco */
+  padding: 10px 20px;
+  border-radius: 1rem;
+  border: none;
+  font-family: "Poppins", sans-serif; /* Fonte Poppins */
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-beige); /* Muda para bege claro no hover */
 }
