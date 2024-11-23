@@ -15,7 +15,11 @@ export default function Services() {
                     <div className="col-md-4">
                         <Card
                             h3="Consulta Nutricional"
-                            p="Consulta Nutricional"
+                            topics={[
+                                "Anamnese Nutricional",
+                                "Plano alimentar individualizado",
+                                "Avaliação Antropométrica",
+                            ]}
                             img="/images/consulta.jpg"
                             alt="Consulta Nutricional"
                         />
@@ -25,7 +29,11 @@ export default function Services() {
                     <div className="col-md-4">
                         <Card
                             h3="Acompanhamento Online"
-                            p="Acompanhamento Online"
+                            topics={[
+                                "Atendimento em qualquer lugar, a qualquer hora",
+                                "Redução de custos com deslocamento",
+                                "Adaptação à rotina do paciente"
+                            ]}
                             img="/images/teleconsulta.jpg"
                             alt="Teleconsulta"
                         />
@@ -35,7 +43,11 @@ export default function Services() {
                     <div className="col-md-4">
                         <Card
                             h3="Reeducação Alimentar"
-                            p="Orientações para uma alimentação saudável"
+                            topics={[
+                                "Avaliar padrões alimentares atuais",
+                                "Receber orientações personalizadas",
+                                "Avaliar padrões alimentares atuais"
+                            ]}
                             img="/images/reeducacao.jpg"
                             alt="Reedução Alimentar"
                         />

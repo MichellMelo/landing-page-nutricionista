@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./Card.module.css";
 
-export default function Card({ h3, p, img, alt }) {
+export default function Card({ h3, topics, img, alt }) {
     return (
         <div
             className="card shadow-sm border-0 text-center"
@@ -19,7 +19,19 @@ export default function Card({ h3, p, img, alt }) {
             </div>
             <div className="card-body">
                 <h3 className="h5 fw-bold">{h3}</h3>
-                <p className="text-muted">{p}</p>
+                {/* Renderização dinâmica dos tópicos */}
+                {topics && (
+                    <ul className="list-unstyled">
+                        {topics.map((topic, index) => (
+                            <li
+                                key={index}
+                                className={`${styles.subtitle} text-muted`}
+                            >
+                                {topic}
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </div>
         </div>
     );
