@@ -9,10 +9,3 @@
   background-size: cover;
   background-position: center;
 }
-
-.heroTitle {
-  color: var(--color-green-dark);
-  margin-bottom: 9rem;
-  text-align: center;
-  animation-duration: 2s;
-}

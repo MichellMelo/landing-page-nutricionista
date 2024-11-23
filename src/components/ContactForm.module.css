@@ -10,7 +10,7 @@
   width: 60%;
   background-color: #ededed;
   border-radius: 0.8rem;
-  padding: 2rem 3rem;
+  padding: 3rem;
   margin: 0 auto;
 }
 
@@ -24,8 +24,11 @@
   border: none;
   font-family: "Poppins", sans-serif; /* Fonte Poppins */
   cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .button:hover {
   background-color: var(--color-beige); /* Muda para bege claro no hover */
+  transform: scale(1.05);
+  color: var(--color-green-dark);
 }

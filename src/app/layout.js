@@ -1,5 +1,4 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import 'animate.css';
 import './globals.css';
 import Header from 'components/Header';
 

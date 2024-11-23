@@ -1,13 +1,14 @@
 import styles from './ContactForm.module.css';
+import Heading from './Heading';
 
 export default function ContactForm() {
     return (
-        <section id="contact" className="py-5">
-            <h2
-                className={`${styles.contactTitle} animate__animated animate__zoomIn display-4 text-center fw-bold`}
-            >
-                Entre em Contato
-            </h2>
+        <section
+            id="contact"
+            className="py-5">
+            <Heading
+                className={styles.contactTitle}
+                text="Entre em Contato" />
             <form
                 className={`${styles.form} mt-4`}
             >
