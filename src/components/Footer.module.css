@@ -1,0 +1,28 @@
+.footer {
+  background-color: var(--color-green-dark); /* Verde utilizado no cabeçalho */
+  color: #ffffff;
+  padding: 20px 0;
+  text-align: center;
+  font-family: "Cinzel", serif;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  background-color: var(--color-beige); /* Bege utilizado no cabeçalho */
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para destaque opcional */
+  transition: transform 0.2s ease; /* Animação para hover */
+}
+
+.social-link:last-child {
+  margin-right: 0;
+}
+
+.social-link:hover {
+  transform: scale(1.1); /* Aumenta o tamanho do link ao passar o mouse */
+}

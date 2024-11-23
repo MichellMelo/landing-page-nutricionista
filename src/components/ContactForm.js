@@ -5,7 +5,7 @@ export default function ContactForm() {
     return (
         <section
             id="contact"
-            className="py-5">
+            className="py-5 mt-5">
             <Heading
                 className={styles.contactTitle}
                 text="Entre em Contato" />

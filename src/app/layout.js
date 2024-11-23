@@ -1,10 +1,14 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './globals.css';
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 
 export const metadata = {
-  title: 'Nutricionista Natielle - Transforme sua Saúde',
-  description: 'Landing page de uma nutricionista profissional.',
+  title: 'Natielle Holanda | Nutricionista',
+  description: 'Nutricionista clínica e esportiva.',
+  icons: {
+    icon: './favicon.ico'
+  }
 };
 
 export default function RootLayout({ children }) {
@@ -13,6 +17,7 @@ export default function RootLayout({ children }) {
       <body>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -5,7 +5,7 @@ export default function Testimonials() {
     return (
         <section
             id="testimonials"
-            className="py-5">
+            className="py-5 mt-5">
             <Heading
                 className={styles.title}
                 text="O que nossos pacientes estão dizendo" />
@@ -13,7 +13,8 @@ export default function Testimonials() {
                 {/* Adicione depoimentos reais aqui */}
                 <ul className={styles.slide}>
                     <li
-                        className={styles.list}>
+                        data-aos="zoom-in-up"
+                        className={`${styles.list} mt-5`}>
                         A Dra. Natielle mudou minha vida! Agora me sinto muito mais saudável. A consulta nutricional comecou a ser uma parte importante de minha vida e estou muito grata por ter encontrado a Dra.  Obrigada, Natielle!
                     </li>
                 </ul>

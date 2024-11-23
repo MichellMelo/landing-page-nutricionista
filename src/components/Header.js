@@ -8,11 +8,15 @@ export default function Header() {
             style={{ backgroundColor: 'var(--color-green-dark)' }}>
             <Link
                 href="/"
-                className="logo mt-4"><Image
+                className="logo mt-4"
+            >
+                <Image
                     src="/images/logo.png"
                     alt="Logo"
                     width={230}
-                    height={100} /></Link>
+                    height={100}
+                />
+            </Link>
             <nav className="nav my-4">
                 <ul className="nav nav-underline">
                     <li className="nav-item">

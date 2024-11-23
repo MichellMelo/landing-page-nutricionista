@@ -9,3 +9,8 @@
   background-size: cover;
   background-position: center;
 }
+
+.title {
+  color: var(--color-green-dark);
+  margin-top: -8rem;
+}

@@ -19,7 +19,7 @@
   background-color: var(--color-green-dark); /* Cor verde escura da paleta */
   color: var(--color-white); /* Texto branco */
   padding: 0.8rem;
-  width: 100%;
+  width: 50%;
   border-radius: 1rem;
   border: none;
   font-family: "Poppins", sans-serif; /* Fonte Poppins */
@@ -30,5 +30,4 @@
 .button:hover {
   background-color: var(--color-beige); /* Muda para bege claro no hover */
   transform: scale(1.05);
-  color: var(--color-green-dark);
 }

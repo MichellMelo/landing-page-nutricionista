@@ -5,10 +5,12 @@ import Card from "./Card";
 export default function Services() {
 
     return (
-        <section id="services" className="py-5">
+        <section
+            id="services"
+            className="py-5">
             <Heading text="Nossos Serviços" />
             <div className="container">
-                <div className="row gx-4 gy-5">
+                <div className="row gx-4 gy-5 mt-4">
                     {/* Card 1 */}
                     <div className="col-md-4">
                         <Card
