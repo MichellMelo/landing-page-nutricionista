@@ -1,10 +1,10 @@
 "use client";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function Header() {
-    const [activeLink, setActiveLink] = useState(0);
+    const [activeLink, setActiveLink] = useState(null);
 
     const handleLinkClick = (link) => {
         setActiveLink(link);
@@ -13,7 +13,8 @@ export default function Header() {
     return (
         <header
             className="d-flex fixed-top flex-column align-items-center justify-content-center mt-0"
-            style={{ backgroundColor: 'var(--color-green-dark)' }}>
+            style={{ backgroundColor: 'var(--color-green-dark)' }}
+        >
             <Link
                 href="/"
                 className="logo mt-4"
@@ -29,34 +30,33 @@ export default function Header() {
                 <ul className="nav nav-underline">
                     <li className="nav-item">
                         <a
-                            className={`nav-link ${activeLink === "#services" ? "active" : ""}`}
-                            aria-current={activeLink === "#services" ? "page" : undefined}
+                            className={`nav-link ${activeLink === "services" ? "active" : ""}`}
+                            aria-current={activeLink === "services" ? "page" : undefined}
                             href="#services"
-                            style={{ color: activeLink === "#services" ? 'var(--color-beige)' : 'var(--color-white)' }}
-                            onClick={() => handleLinkClick("#services")}
+                            style={{ color: activeLink === "services" ? 'var(--color-beige)' : 'var(--color-white)' }}
+                            onClick={() => handleLinkClick("services")}
                         >
                             Serviços
                         </a>
                     </li>
                     <li className="nav-item">
                         <a
-                            className={`nav-link ${activeLink === "#testimonials" ? "active" : ""}`}
-                            aria-current={activeLink === "#testimonials" ? "page" : undefined}
+                            className={`nav-link ${activeLink === "testimonials" ? "active" : ""}`}
+                            aria-current={activeLink === "testimonials" ? "page" : undefined}
                             href="#testimonials"
-                            style={{ color: activeLink === "#testimonials" ? 'var(--color-beige)' : 'var(--color-white)' }}
-                            onClick={() => handleLinkClick("#testimonials")}
-
+                            style={{ color: activeLink === "testimonials" ? 'var(--color-beige)' : 'var(--color-white)' }}
+                            onClick={() => handleLinkClick("testimonials")}
                         >
                             Depoimentos
                         </a>
                     </li>
                     <li className="nav-item">
                         <a
-                            className={`nav-link ${activeLink === "#contact" ? "active" : ""}`}
-                            aria-current={activeLink === "#contact" ? "page" : undefined}
+                            className={`nav-link ${activeLink === "contact" ? "active" : ""}`}
+                            aria-current={activeLink === "contact" ? "page" : undefined}
                             href="#contact"
-                            style={{ color: activeLink === "#contact" ? 'var(--color-beige)' : 'var(--color-white)' }}
-                            onClick={() => handleLinkClick("#contact")}
+                            style={{ color: activeLink === "contact" ? 'var(--color-beige)' : 'var(--color-white)' }}
+                            onClick={() => handleLinkClick("contact")}
                         >
                             Contato
                         </a>

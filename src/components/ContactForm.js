@@ -30,6 +30,21 @@ export default function ContactForm() {
                     </div>
                     <div className='col-md-6'>
                         <label
+                            htmlFor="telefone"
+                            className="block mb-2"
+                        >
+                            Telefone:
+                        </label>
+                        <input
+                            type="phone"
+                            id="phone"
+                            name="phone"
+                            required
+                            className="form-control"
+                        />
+                    </div>
+                    <div className='col'>
+                        <label
                             htmlFor="email"
                             className="block mb-2"
                         >
