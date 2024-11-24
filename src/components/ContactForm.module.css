@@ -31,3 +31,34 @@
   background-color: var(--color-beige); /* Muda para bege claro no hover */
   transform: scale(1.05);
 }
+
+/* ContactForm.module.css */
+
+.alert {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  z-index: 9999; /* Garante que o alerta fique acima de outros elementos */
+  text-align: center;
+  transition: opacity 0.5s ease-out;
+  opacity: 1;
+}
+
+.alert-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.alert-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+/* Efeito de transição para desaparecer suavemente */
+.alert.hidden {
+  opacity: 0;
+}
