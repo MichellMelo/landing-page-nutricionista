@@ -1,21 +1,20 @@
-// src/lib/firebase.js
+// Importando os módulos do Firebase
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// Your web app's Firebase configuration
+// Configuração do Firebase utilizando variáveis de ambiente
 const firebaseConfig = {
-    apiKey: "AIzaSyCG7qDUIuaNq_BoonUgSxZKN8j5lIlJt7E",
-    authDomain: "formulario-natielle.firebaseapp.com",
-    projectId: "formulario-natielle",
-    storageBucket: "formulario-natielle.appspot.com",
-    messagingSenderId: "104392145863",
-    appId: "1:104392145863:web:d7beb092f9f84d0694f7e2",
-    measurementId: "G-QLL8RGWY75"
+    apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+    authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+    projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+    storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+    messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+    appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+    measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
 };
 
-// Initialize Firebase
+// Inicializando o Firebase
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app); // Agora temos acesso ao Firestore
 
-// Initialize Firestore and export it
-const db = getFirestore(app);
-export { db };
+export { db }; // Exportando o Firestore para usar em outros lugares do projeto
