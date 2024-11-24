@@ -8,10 +8,10 @@ export default function Footer() {
             <div className="footer-content d-flex justify-content-around align-items-center">
                 <div>
                     <div>
-                        <p>Contato:</p>
+                        <p className={`${styles["contact"]} h5`}>Contato</p>
                     </div>
                     <div>
-                        <p className='muted'>(85) 98421-0498</p>
+                        <p className={`${styles["contact"]}`}>(85) 98421-0498</p>
                     </div>
                 </div>
 

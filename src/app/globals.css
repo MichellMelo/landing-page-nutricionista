@@ -35,3 +35,38 @@ h2,
 h3 {
   font-family: "Cinzel", serif;
 }
+
+/* styles.css ou module.css */
+.swiper {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; /* Centraliza o carrossel */
+}
+
+.swiper-slide {
+  font-size: 1rem;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-pagination-bullet {
+  background-color: var(
+    --color-green-dark
+  ) !important; /* Cor das bolinhas da paginação */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-green-dark) !important; /* Cor padrão dos botões */
+  transition: color 0.3s ease, transform 0.3s ease; /* Transição suave */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  color: #32cd32 !important; /* Verde-lima para o hover */
+  transform: scale(1.2); /* Aumenta levemente o botão ao passar o mouse */
+}
