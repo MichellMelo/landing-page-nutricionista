@@ -1,7 +1,15 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 
 export default function Header() {
+    const [activeLink, setActiveLink] = useState(0);
+
+    const handleLinkClick = (link) => {
+        setActiveLink(link);
+    };
+
     return (
         <header
             className="d-flex fixed-top flex-column align-items-center justify-content-center mt-0"
@@ -20,22 +28,38 @@ export default function Header() {
             <nav className="nav my-4">
                 <ul className="nav nav-underline">
                     <li className="nav-item">
-                        <a className="nav-link active"
-                            aria-current="page"
+                        <a
+                            className={`nav-link ${activeLink === "#services" ? "active" : ""}`}
+                            aria-current={activeLink === "#services" ? "page" : undefined}
                             href="#services"
-                            style={{ color: 'var(--color-beige)' }}>Serviços</a>
+                            style={{ color: activeLink === "#services" ? 'var(--color-beige)' : 'var(--color-white)' }}
+                            onClick={() => handleLinkClick("#services")}
+                        >
+                            Serviços
+                        </a>
                     </li>
                     <li className="nav-item">
                         <a
-                            className="nav-link"
+                            className={`nav-link ${activeLink === "#testimonials" ? "active" : ""}`}
+                            aria-current={activeLink === "#testimonials" ? "page" : undefined}
                             href="#testimonials"
-                            style={{ color: 'var(--color-white)' }}>Depoimentos</a>
+                            style={{ color: activeLink === "#testimonials" ? 'var(--color-beige)' : 'var(--color-white)' }}
+                            onClick={() => handleLinkClick("#testimonials")}
+
+                        >
+                            Depoimentos
+                        </a>
                     </li>
                     <li className="nav-item">
                         <a
-                            className="nav-link"
+                            className={`nav-link ${activeLink === "#contact" ? "active" : ""}`}
+                            aria-current={activeLink === "#contact" ? "page" : undefined}
                             href="#contact"
-                            style={{ color: 'var(--color-white)' }}>Contato</a>
+                            style={{ color: activeLink === "#contact" ? 'var(--color-beige)' : 'var(--color-white)' }}
+                            onClick={() => handleLinkClick("#contact")}
+                        >
+                            Contato
+                        </a>
                     </li>
                 </ul>
             </nav>
