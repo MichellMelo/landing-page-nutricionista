@@ -1,6 +1,7 @@
 .card-img-top {
   overflow: hidden; /* Garante que o zoom não ultrapasse os limites do contêiner */
   position: relative;
+  cursor: pointer;
 }
 
 .card-img-top img {

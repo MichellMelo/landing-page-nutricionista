@@ -3,24 +3,21 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css"; // Estilos básicos do Swiper
-import "swiper/css/effect-fade";
 import "swiper/css/pagination"; // Estilos para paginação (opcional)
 import "swiper/css/navigation"; // Estilos para navegação (opcional)
-import { Pagination, Navigation, Autoplay, EffectFade } from "swiper/modules"; // Módulos adicionais do Swiper
-import styles from "./Testimonials.module.css"; // Certifique-se de ajustar o caminho do CSS
+import { Pagination, Navigation, Autoplay } from "swiper/modules"; // Módulos adicionais do Swiper
 import Heading from "./Heading"; // Certifique-se de que o componente Heading está no caminho correto
+import Image from "next/image";
 
 export default function Testimonials() {
     return (
         <section id="testimonials" className="py-5 mt-5">
             <Heading
-                className={styles.title}
-                text="O que nossos pacientes estão dizendo"
+                text="Depoimentos dos pacientes"
             />
             <div>
                 <Swiper
-                    modules={[Pagination, Navigation, Autoplay, EffectFade]} // Ativando os módulos necessários
-                    effect="fade"
+                    modules={[Pagination, Navigation, Autoplay]} // Ativando os módulos necessários
                     spaceBetween={30} // Espaçamento entre slides
                     slidesPerView={1} // Quantos slides aparecem de uma vez (ajustável)
                     pagination={{ clickable: true }} // Habilita a paginação (bolinhas)
@@ -32,19 +29,25 @@ export default function Testimonials() {
                         pauseOnMouseEnter: true,
                     }}
                     loop={true}
-                    speed={1000}
+                    speed={3000}
                 >
                     {/* Depoimento 1 */}
                     <SwiperSlide>
                         <p className="swiper-slide">
-                            "Natielle, só passando pra dar um feedback. Estou 15 dias fazendo minha dieta e tenho que falar, já melhorei minha disposição, meu sono e o melhor, sinto que meu corpo desinflamou, estou me sentindo menos inchado. Obrigado pelo serviço."
+                            "Natielle, estou passando para dar um feedback. Estou há 15 dias seguindo uma reeducação alimentar e preciso dizer: melhorei minha disposição, meu sono e, o melhor, parece que meu corpo desinflamou. Estou me sentindo menos inchado. Obrigado pelo serviço!"
+                        </p>
+                        <p className="swiper-author">
+                            Johnata Silva
                         </p>
                     </SwiperSlide>
 
                     {/* Depoimento 2 */}
                     <SwiperSlide>
                         <p className="swiper-slide">
-                            "O acompanhamento online foi essencial para eu alcançar meus objetivos. Recomendo muito! A Dra. Natielle é incrível."
+                            "Estou me sentindo muito mais disposta! Antes, vivia com sono o tempo todo, e agora isso praticamente desapareceu. Também percebi que, antes, eu comia demais e, mesmo assim, não me sentia satisfeita. Agora, consigo me sentir cheia com bem menos. Outra mudança incrível foi em relação à água: antes, eu quase não bebia e nem sentia sede. Agora, com o hábito de tomar água regularmente, sinto sede ao longo do dia, mas de forma equilibrada, e não aquela sensação extrema de passar o dia inteiro sem beber."
+                        </p>
+                        <p className="swiper-author">
+                            Brena Morais
                         </p>
                     </SwiperSlide>
 
@@ -52,6 +55,9 @@ export default function Testimonials() {
                     <SwiperSlide>
                         <p className="swiper-slide">
                             Nunca imaginei que pequenas mudanças na alimentação fariam tanta diferença. Obrigada pela dedicação e cuidado!
+                        </p>
+                        <p className="swiper-author">
+                            Ana Paula
                         </p>
                     </SwiperSlide>
                 </Swiper>

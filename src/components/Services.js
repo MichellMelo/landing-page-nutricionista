@@ -46,7 +46,7 @@ export default function Services() {
                             topics={[
                                 "Avaliar padrões alimentares atuais",
                                 "Receber orientações personalizadas",
-                                "Avaliar padrões alimentares atuais"
+                                "Introduzir mudanças graduais"
                             ]}
                             img="/images/reeducacao.jpg"
                             alt="Reedução Alimentar"
