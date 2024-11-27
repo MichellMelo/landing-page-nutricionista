@@ -52,14 +52,6 @@ export default function Testimonials() {
                     </SwiperSlide>
 
                     {/* Depoimento 3 */}
-                    <SwiperSlide>
-                        <p className="swiper-slide">
-                            Nunca imaginei que pequenas mudanças na alimentação fariam tanta diferença. Obrigada pela dedicação e cuidado!
-                        </p>
-                        <p className="swiper-author">
-                            Ana Paula
-                        </p>
-                    </SwiperSlide>
                 </Swiper>
             </div>
         </section>

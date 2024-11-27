@@ -6,7 +6,7 @@ export default function Card({ h3, topics, img, alt }) {
         <div
             className="card shadow-sm border-0 text-center"
             data-aos="fade-up"
-            data-aos-duration="3000"
+            data-aos-duration="1500"
         >
             <div className={styles["card-img-top"]}>
                 <Image
