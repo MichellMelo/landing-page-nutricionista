@@ -128,9 +128,9 @@ export default function ContactForm() {
                         ></textarea>
                     </div>
                 </div>
-                <div className="d-flex justify-content-center">
+                <div className={`${styles["button-container"]} d-flex justify-content-center`}>
                     <button type="submit" className={`${styles.button}`}>
-                        Enviar Mensagem
+                        Enviar
                     </button>
                 </div>
             </form>
