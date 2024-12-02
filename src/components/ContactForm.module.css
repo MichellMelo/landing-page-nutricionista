@@ -62,3 +62,10 @@
 .alert.hidden {
   opacity: 0;
 }
+
+@media (max-width: 440px) {
+  .button-container {
+    display: flex;
+    justify-content: start !important;
+  }
+}

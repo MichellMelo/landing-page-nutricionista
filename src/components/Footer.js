@@ -6,7 +6,7 @@ export default function Footer() {
     return (
         <footer className={`${styles.footer}`}>
             <div className="footer-content d-flex justify-content-around align-items-center">
-                <div>
+                <div className={styles["contact-container"]}>
                     <div>
                         <p className={`${styles["contact"]} h5`}>Contato</p>
                     </div>
