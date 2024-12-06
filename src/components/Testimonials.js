@@ -7,11 +7,10 @@ import "swiper/css/pagination"; // Estilos para paginação (opcional)
 import "swiper/css/navigation"; // Estilos para navegação (opcional)
 import { Pagination, Navigation, Autoplay } from "swiper/modules"; // Módulos adicionais do Swiper
 import Heading from "./Heading"; // Certifique-se de que o componente Heading está no caminho correto
-import Image from "next/image";
 
 export default function Testimonials() {
     return (
-        <section id="testimonials" className="py-5 mt-5">
+        <section id="testimonials" className="py-5 mt-4">
             <Heading
                 text="Depoimentos dos pacientes"
             />
@@ -24,12 +23,12 @@ export default function Testimonials() {
                     navigation={true} // Habilita botões de navegação (anterior/próximo)
                     className="swiper"
                     autoplay={{
-                        delay: 3000,
+                        delay: 5000,
                         disableOnInteraction: false,
                         pauseOnMouseEnter: true,
                     }}
                     loop={true}
-                    speed={3000}
+                    speed={5000}
                 >
                     {/* Depoimento 1 */}
                     <SwiperSlide>
