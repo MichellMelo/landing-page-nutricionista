@@ -14,12 +14,17 @@
   margin: 0 auto;
 }
 
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
 .button {
   margin-top: 2rem;
   background-color: var(--color-green-dark); /* Cor verde escura da paleta */
   color: var(--color-white); /* Texto branco */
   padding: 0.8rem;
-  width: 50%;
+  width: 60%;
   border-radius: 1rem;
   border: none;
   font-family: "Poppins", sans-serif; /* Fonte Poppins */
@@ -31,8 +36,6 @@
   background-color: var(--color-beige); /* Muda para bege claro no hover */
   transform: scale(1.05);
 }
-
-/* ContactForm.module.css */
 
 .alert {
   position: fixed;
@@ -64,8 +67,11 @@
 }
 
 @media (max-width: 440px) {
-  .button-container {
-    display: flex;
-    justify-content: start !important;
+  .form {
+    width: 90%;
+  }
+
+  .button {
+    width: 100%;
   }
 }
