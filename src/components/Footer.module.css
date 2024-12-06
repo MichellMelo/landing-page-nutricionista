@@ -28,3 +28,9 @@
 .social-link:hover {
   transform: scale(1.1); /* Aumenta o tamanho do link ao passar o mouse */
 }
+
+@media (max-width: 480px) {
+  .contact-container {
+    display: none;
+  }
+}
