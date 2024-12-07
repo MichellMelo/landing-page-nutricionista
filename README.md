@@ -24,3 +24,7 @@ Este é um projeto de landing page desenvolvido para promover os serviços de nu
 ![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
 ---
+
+## Autor
+
+[Michell Melo](https://www.instagram.com/michell_melo58/profilecard/?igsh=amY0Z3d3cnl3bWxx)

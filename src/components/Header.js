@@ -53,7 +53,7 @@ export default function Header() {
                                 color: activeLink === "services" ? "var(--color-beige)" : "var(--color-white)",
                             }}
                         >
-                            Serviços
+                            Especialidades
                         </a>
                     </li>
                     <li className="nav-item">
