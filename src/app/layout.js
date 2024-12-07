@@ -17,8 +17,6 @@ export const metadata = {
     images: [
       {
         url: 'https://natielleholandanutricionista.vercel.app/images/preview.jpg',
-        with: 1200,
-        height: 630,
         alt: 'Natielle Holanda | Nutricionista'
       }
     ],
