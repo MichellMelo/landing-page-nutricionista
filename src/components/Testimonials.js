@@ -23,12 +23,12 @@ export default function Testimonials() {
                     navigation={true} // Habilita botões de navegação (anterior/próximo)
                     className="swiper"
                     autoplay={{
-                        delay: 5000,
+                        delay: 3000,
                         disableOnInteraction: false,
                         pauseOnMouseEnter: true,
                     }}
                     loop={true}
-                    speed={5000}
+                    speed={4000}
                 >
                     {/* Depoimento 1 */}
                     <SwiperSlide>

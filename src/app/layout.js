@@ -8,6 +8,22 @@ export const metadata = {
   description: 'Nutricionista clínica e esportiva.',
   icons: {
     icon: './favicon.ico'
+  },
+  openGraph: {
+    title: 'Natielle Holanda | Nutricionista',
+    description: 'Nutricionista clínica e esportiva.',
+    url: 'https://natielleholandanutricionista.vercel.app/',
+    siteName: 'Natielle Holanda | Nutricionista',
+    images: [
+      {
+        url: 'https://natielleholandanutricionista.vercel.app/images/preview.png',
+        with: 1200,
+        height: 630,
+        alt: 'Natielle Holanda | Nutricionista'
+      }
+    ],
+    locale: 'pt-BR',
+    type: 'website'
   }
 };
 
