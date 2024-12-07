@@ -13,3 +13,17 @@
   transform: scale(1.2); /* Aumenta a imagem em 20% ao passar o mouse */
   opacity: 0.9; /* Leve diminuição de opacidade para dar o efeito de zoom interno */
 }
+
+.subtitle {
+  font-size: 0.9rem;
+}
+
+.image-assignment {
+  font-size: 0.7rem;
+  text-align: right;
+  margin-right: 2rem;
+}
+
+.freepik {
+  text-decoration: none;
+}
