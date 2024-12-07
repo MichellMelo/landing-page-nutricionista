@@ -17,6 +17,17 @@ export default function Card({ h3, topics, img, alt }) {
                     className="img-fluid"
                 />
             </div>
+            <div className={styles["image-assignment"]}>
+                <p
+                    className="text-muted">
+                    Designed by <a
+                        className={styles.freepik}
+                        href="www.freepik.com"
+                        target="_blank">
+                        Freepik
+                    </a>
+                </p>
+            </div>
             <div className="card-body">
                 <h3 className="h5 fw-bold">{h3}</h3>
                 {/* Renderização dinâmica dos tópicos */}

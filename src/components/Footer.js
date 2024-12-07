@@ -6,15 +6,6 @@ export default function Footer() {
     return (
         <footer className={`${styles.footer}`}>
             <div className="footer-content d-flex justify-content-around align-items-center">
-                <div className={styles["contact-container"]}>
-                    <div>
-                        <p className={`${styles["contact"]} h5`}>Contato</p>
-                    </div>
-                    <div>
-                        <p className={`${styles["contact"]}`}>(85) 98421-0498</p>
-                    </div>
-                </div>
-
                 <div className="footer-logo">
                     <Image
                         src={"/images/sublogo.png"}
