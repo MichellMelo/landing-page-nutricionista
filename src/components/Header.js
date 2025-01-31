@@ -1,33 +1,51 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { debounce } from "lodash";
 
 export default function Header() {
     const [activeLink, setActiveLink] = useState(null);
 
+    const debouncedHandleScroll = useMemo(
+        () =>
+            debounce(() => {
+                const sections = document.querySelectorAll("section");
+                let currentSection = null;
+                const scrollY = window.scrollY;
+
+                sections.forEach((section) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+
+                    if (
+                        scrollY >= sectionTop - window.innerHeight * 0.3 &&
+                        scrollY < sectionTop + sectionHeight
+                    ) {
+                        currentSection = section.getAttribute("id");
+                    }
+                });
+
+                setActiveLink(currentSection);
+            }, 100),
+        []
+    );
+
     useEffect(() => {
-        const handleScroll = () => {
-            const sections = document.querySelectorAll("section");
-            let currentSection = null;
+        window.addEventListener("scroll", debouncedHandleScroll);
+        debouncedHandleScroll(); // Define o estado inicial corretamente
 
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                if (
-                    window.scrollY >= sectionTop - 50 && // Ajuste para considerar margens
-                    window.scrollY < sectionTop + sectionHeight
-                ) {
-                    currentSection = section.getAttribute("id");
-                }
-            });
-
-            setActiveLink(currentSection);
+        return () => {
+            window.removeEventListener("scroll", debouncedHandleScroll);
+            debouncedHandleScroll.cancel(); // Evita vazamento de memória
         };
+    }, [debouncedHandleScroll]);
 
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
+    const navLinks = [
+        { id: "services", label: "Especialidades" },
+        { id: "testimonials", label: "Depoimentos" },
+        { id: "contact", label: "Contato" },
+    ];
 
     return (
         <header
@@ -44,42 +62,20 @@ export default function Header() {
             </Link>
             <nav className="nav my-4">
                 <ul className="nav nav-underline">
-                    <li className="nav-item">
-                        <a
-                            className={`nav-link ${activeLink === "services" ? "active" : ""}`}
-                            aria-current={activeLink === "services" ? "page" : undefined}
-                            href="#services"
-                            style={{
-                                color: activeLink === "services" ? "var(--color-beige)" : "var(--color-white)",
-                            }}
-                        >
-                            Especialidades
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a
-                            className={`nav-link ${activeLink === "testimonials" ? "active" : ""}`}
-                            aria-current={activeLink === "testimonials" ? "page" : undefined}
-                            href="#testimonials"
-                            style={{
-                                color: activeLink === "testimonials" ? "var(--color-beige)" : "var(--color-white)",
-                            }}
-                        >
-                            Depoimentos
-                        </a>
-                    </li>
-                    <li className="nav-item">
-                        <a
-                            className={`nav-link ${activeLink === "contact" ? "active" : ""}`}
-                            aria-current={activeLink === "contact" ? "page" : undefined}
-                            href="#contact"
-                            style={{
-                                color: activeLink === "contact" ? "var(--color-beige)" : "var(--color-white)",
-                            }}
-                        >
-                            Contato
-                        </a>
-                    </li>
+                    {navLinks.map(({ id, label }) => (
+                        <li key={id} className="nav-item">
+                            <a
+                                className={`nav-link ${activeLink === id ? "active" : ""}`}
+                                aria-current={activeLink === id ? "page" : undefined}
+                                href={`#${id}`}
+                                style={{
+                                    color: activeLink === id ? "var(--color-beige)" : "var(--color-white)",
+                                }}
+                            >
+                                {label}
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </nav>
         </header>

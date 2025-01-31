@@ -36,7 +36,7 @@ export default function Testimonials() {
                             "Natielle, estou passando para dar um feedback. Estou há 15 dias seguindo uma reeducação alimentar e preciso dizer: melhorei minha disposição, meu sono e, o melhor, parece que meu corpo desinflamou. Estou me sentindo menos inchado. Obrigado pelo serviço!"
                         </p>
                         <p className="swiper-author">
-                            Johnata Silva
+                            Jhonata Vieira
                         </p>
                     </SwiperSlide>
 
