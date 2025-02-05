@@ -5,6 +5,9 @@ import Footer from 'components/Footer';
 
 export const metadata = {
   title: 'Natielle Holanda | Nutricionista',
+  verification: {
+    google: 'tXZppOfjSt4y1LuaDEnJJPIVJ4jTCpkopafUpCMKAno'
+  },
   description: 'Nutricionista clínica e esportiva.',
   icons: {
     icon: './favicon.ico'
